@@ -55,8 +55,8 @@
     },
     "_lscale": {
       "__type__": "cc.Vec3",
-      "x": 1,
-      "y": 1,
+      "x": 0.75,
+      "y": 0.75,
       "z": 1
     },
     "_mobility": 0,
@@ -405,8 +405,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 64,
-      "height": 41.8
+      "width": 72,
+      "height": 46.84
     },
     "_anchorPoint": {
       "__type__": "cc.Vec2",
@@ -444,10 +444,10 @@
     "_string": "素菜",
     "_horizontalAlign": 1,
     "_verticalAlign": 1,
-    "_actualFontSize": 30,
-    "_fontSize": 30,
+    "_actualFontSize": 34,
+    "_fontSize": 34,
     "_fontFamily": "Arial",
-    "_lineHeight": 30,
+    "_lineHeight": 34,
     "_overflow": 0,
     "_enableWrapText": true,
     "_font": {
@@ -464,9 +464,9 @@
     "_enableOutline": true,
     "_outlineColor": {
       "__type__": "cc.Color",
-      "r": 195,
-      "g": 157,
-      "b": 41,
+      "r": 52,
+      "g": 98,
+      "b": 177,
       "a": 255
     },
     "_outlineWidth": 2,
