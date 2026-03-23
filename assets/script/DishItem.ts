@@ -14,6 +14,8 @@ export class DishItem extends Component {
     private btnAdd: Node = null;
     @property(Label)
     private glbNotImg: Label = null;
+    @property(Label)
+    private glbPrice: Label = null;
 
     private dishData: DishData;
 
@@ -32,6 +34,7 @@ export class DishItem extends Component {
             return;
         }
         this.glbName.string = this.dishData.name;
+        this.glbPrice.string = `￥：${this.dishData.nPrice}`
         let vSelectDish: DishData[] = MenuManage.ins.getSelectDish();
         let bSelect: boolean = false;
         for (let i = 0; i < vSelectDish.length; i++) {
@@ -60,6 +63,12 @@ export class DishItem extends Component {
     }
 
     private onClickAdd() {
-        eventManager.dispatch("add_dish", [this.dishData]);
+        let newDishData: DishData = {
+            id: this.dishData.id,
+            name: this.dishData.name,
+            strUrl: this.dishData.strUrl,
+            nPrice: this.dishData.nPrice,
+        };
+        MenuManage.ins.addSelectDish(newDishData);
     }
 }

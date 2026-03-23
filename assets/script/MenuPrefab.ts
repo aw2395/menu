@@ -50,7 +50,6 @@ export class MenuPrefab extends Component {
     private onAddEventListener() {
         UIOp2DUtils.createScaleBtn(this.btnSure, this.onClickBtnSure, this);
         eventManager.addEvent("dish_change", this.dishChangeEvent.bind(this), this);
-        eventManager.addEvent("add_dish", this.addDishEvent.bind(this), this);
         eventManager.addEvent("show_icon", this.showIconEvent.bind(this), this);
         eventManager.addEvent("type_select", this.typeSelectEvent.bind(this), this);
     }
@@ -58,7 +57,11 @@ export class MenuPrefab extends Component {
     private updateView() {
         let vSelectDish: DishData[] = MenuManage.ins.getSelectDish();
         this.glbDishNum.string = `当前已点菜品数：${vSelectDish.length}`;
-        this.glbPrice.string = `价格：￥${vSelectDish.length}`;
+        let nPrice: number = 0;
+        for(let i=0; i<vSelectDish.length; i++){
+            nPrice += vSelectDish[i].nPrice;
+        }
+        this.glbPrice.string = `价格：￥${nPrice}`;
         let nSelectedId: number = MenuManage.ins.nSelectIndex;
         let vDishDataOfId: DishData[] = MenuManage.ins.getMapDishDataBySelect(nSelectedId);
         for (let i = 0; i < vDishDataOfId.length; i++) {
@@ -83,8 +86,6 @@ export class MenuPrefab extends Component {
     private dishChangeEvent() {
         this.updateView();
     }
-
-    private addDishEvent(arg: any[]) {}
 
     private showIconEvent(arg: any[]) {
         let strUrl: string = arg[0];

@@ -5,7 +5,7 @@ export interface DishData {
     id: string;
     strUrl: string;
     name: string;
-    strExplain?: string;
+    nPrice: number;
 }
 
 export class MenuManage {
@@ -21,170 +21,256 @@ export class MenuManage {
     private readonly mapDishData: { [key: string]: DishData } = {
         ["0_1"]: {
             id: "0_1",
-            strUrl: "",
+            strUrl: "nnlb",
             name: "牛腩炖萝卜",
+            nPrice: 19,
         },
         ["0_2"]: {
             id: "0_2",
-            strUrl: "",
+            strUrl: "xcnr",
             name: "香菜牛肉",
+            nPrice: 19,
         },
         ["0_3"]: {
             id: "0_3",
             strUrl: "pjy",
             name: "啤酒鸭",
+            nPrice: 19,
         },
         ["0_4"]: {
             id: "0_4",
             strUrl: "hsr",
             name: "红烧肉",
+            nPrice: 19,
         },
         ["0_5"]: {
             id: "0_5",
             strUrl: "xqm",
             name: "虾球面",
+            nPrice: 19,
         },
         ["0_6"]: {
             id: "0_6",
             strUrl: "qzx",
             name: "清蒸蟹",
+            nPrice: 29,
         },
         ["0_7"]: {
             id: "0_7",
             strUrl: "xlx",
             name: "香辣蟹",
+            nPrice: 29,
         },
         ["0_8"]: {
             id: "0_8",
             strUrl: "hswcy",
             name: "红烧武昌鱼",
+            nPrice: 19,
         },
         ["0_9"]: {
             id: "0_9",
             strUrl: "kljc",
             name: "可乐鸡翅",
+            nPrice: 19,
         },
         ["0_10"]: {
             id: "0_10",
             strUrl: "lc",
             name: "腊肠",
+            nPrice: 9,
         },
         ["0_11"]: {
             id: "0_11",
             strUrl: "qjrs",
             name: "青椒肉丝",
+            nPrice: 9,
         },
         ["0_12"]: {
             id: "0_12",
             strUrl: "qzly",
             name: "清蒸鲈鱼",
+            nPrice: 9,
         },
         ["0_13"]: {
             id: "0_13",
             strUrl: "wdrm",
             name: "豌豆肉末",
+            nPrice: 9,
         },
         ["0_14"]: {
             id: "0_14",
-            strUrl: "",
+            strUrl: "st",
             name: "蒜苔炒腊肉",
+            nPrice: 9,
         },
         ["0_15"]: {
             id: "0_15",
             strUrl: "gbr",
             name: "锅包肉",
+            nPrice: 19,
         },
-
         ["1_1"]: {
             id: "1_1",
             strUrl: "jdht",
             name: "鸡蛋火腿",
+            nPrice: 1,
         },
         ["1_2"]: {
             id: "1_2",
             strUrl: "jhjd",
             name: "韭黄鸡蛋",
+            nPrice: 1,
         },
 
         ["1_3"]: {
             id: "1_3",
             strUrl: "qjjd",
             name: "青椒鸡蛋",
+            nPrice: 1,
         },
         ["1_4"]: {
             id: "1_4",
             strUrl: "ssbc",
             name: "手撕包菜",
+            nPrice: 1,
         },
         ["1_5"]: {
             id: "1_5",
             strUrl: "shq",
             name: "上海青",
+            nPrice: 1,
         },
         ["1_6"]: {
             id: "1_6",
-            strUrl: "td",
-            name: "土豆",
+            strUrl: "tds",
+            name: "土豆丝",
+            nPrice: 1,
         },
         ["1_7"]: {
             id: "1_7",
-            strUrl: "",
+            strUrl: "gbos",
             name: "干煸藕丝",
+            nPrice: 9,
+        },
+        ["1_8"]: {
+            id: "1_8",
+            strUrl: "fqjd",
+            name: "番茄鸡蛋",
+            nPrice: 1,
+        },
+        ["1_9"]: {
+            id: "1_9",
+            strUrl: "tdht",
+            name: "土豆火腿",
+            nPrice: 1,
+        },
+        ["1_10"]: {
+            id: "1_10",
+            strUrl: "hysc",
+            name: "耗油生菜",
+            nPrice: 1,
         },
         ["2_1"]: {
             id: "2_1",
             strUrl: "ympgt",
             name: "玉米排骨汤",
+            nPrice: 19,
         },
         ["2_2"]: {
             id: "2_2",
-            strUrl: "",
+            strUrl: "hdpgt",
             name: "海带排骨汤",
+            nPrice: 19,
         },
         ["2_3"]: {
             id: "2_3",
             strUrl: "fqjdt",
             name: "番茄鸡蛋汤",
+            nPrice: 1,
         },
         ["2_4"]: {
             id: "2_4",
             strUrl: "zcdht",
             name: "紫菜蛋花汤",
+            nPrice: 1,
+        },
+        ["2_5"]: {
+            id: "2_5",
+            strUrl: "ot",
+            name: "筒子骨藕汤",
+            nPrice: 19,
         },
         ["3_1"]: {
             id: "3_1",
             strUrl: "glsj",
             name: "干捞水饺",
+            nPrice: 1,
         },
         ["3_2"]: {
             id: "3_2",
             strUrl: "jj",
             name: "煎饺",
+            nPrice: 1,
         },
         ["3_3"]: {
             id: "3_3",
             strUrl: "zbz",
             name: "蒸包子",
+            nPrice: 1,
         },
         ["3_4"]: {
             id: "3_4",
-            strUrl: "",
+            strUrl: "zdp",
             name: "煮豆皮",
+            nPrice: 1,
         },
         ["3_5"]: {
             id: "3_5",
-            strUrl: "",
+            strUrl: "szb",
             name: "手抓饼",
+            nPrice: 1,
         },
         ["3_6"]: {
             id: "3_6",
             strUrl: "cpm",
             name: "炒泡面",
+            nPrice: 1,
         },
         ["3_7"]: {
             id: "3_7",
             strUrl: "dcf",
             name: "蛋炒饭",
+            nPrice: 1,
+        },
+        ["3_8"]: {
+            id: "3_8",
+            strUrl: "zjd",
+            name: "蒸鸡蛋",
+            nPrice: 1,
+        },
+        ["3_9"]: {
+            id: "3_9",
+            strUrl: "dt",
+            name: "蛋挞",
+            nPrice: 1,
+        },
+        ["3_10"]: {
+            id: "3_10",
+            strUrl: "kc",
+            name: "烤肠",
+            nPrice: 1,
+        },
+        ["3_11"]: {
+            id: "3_11",
+            strUrl: "rjmx",
+            name: "肉酱米线",
+            nPrice: 1,
+        },
+        ["3_12"]: {
+            id: "3_12",
+            strUrl: "hg",
+            name: "火锅",
+            nPrice: 1,
         },
     };
     private vSelectDish: DishData[] = [];
