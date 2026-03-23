@@ -1,8 +1,8 @@
 import { _decorator, Component, instantiate, Node, Prefab, ScrollView } from "cc";
+import { DishSelectItem } from "./DishSelectItem";
 import { eventManager } from "./EventManger";
 import { DishData, MenuManage } from "./MenuManage";
 import { UIOp2DUtils } from "./UIOp2DUtils";
-import { DishSelectItem } from "./DishSelectItem";
 const { ccclass, property } = _decorator;
 
 @ccclass("DishSelectPrefab")
@@ -30,16 +30,16 @@ export class DishSelectPrefab extends Component {
 
     public updateView() {
         let vSelectDish: DishData[] = MenuManage.ins.getSelectDish();
-        for(let i=0;i<vSelectDish.length; i++){
+        for (let i = 0; i < vSelectDish.length; i++) {
             let item = this.scrollDish.content.children[i];
-            if(!item){
+            if (!item) {
                 item = instantiate(this.dishSelectItem);
                 this.scrollDish.content.addChild(item);
             }
             item.active = true;
             item.getComponent(DishSelectItem).updateView(vSelectDish[i]);
         }
-        for(let j=vSelectDish.length; j<this.scrollDish.content.children.length; j++){
+        for (let j = vSelectDish.length; j < this.scrollDish.content.children.length; j++) {
             this.scrollDish.content.children[j].active = false;
         }
     }
@@ -59,7 +59,6 @@ export class DishSelectPrefab extends Component {
         for (let i = 0; i < vSelectDish.length; i++) {
             strDesc += `菜品${i + 1}：`;
             strDesc += `名字：${vSelectDish[i].name},`;
-            strDesc += `备注：${vSelectDish[i].strExplain || "无"}`;
             if (i < vSelectDish.length - 1) {
                 strDesc += "&&";
             }

@@ -12,8 +12,6 @@ export class DishItem extends Component {
     private glbName: Label = null;
     @property(Node)
     private btnAdd: Node = null;
-    @property(Node)
-    private btnDel: Node = null;
     @property(Label)
     private glbNotImg: Label = null;
 
@@ -26,7 +24,6 @@ export class DishItem extends Component {
     private onAddEventListener() {
         UIOp2DUtils.createScaleBtn(this.grpIcon.node, this.onClickIcon, this);
         UIOp2DUtils.createScaleBtn(this.btnAdd, this.onClickAdd, this);
-        UIOp2DUtils.createScaleBtn(this.btnDel, this.onClickDel, this);
     }
 
     public updateView(data: DishData) {
@@ -44,7 +41,6 @@ export class DishItem extends Component {
             }
         }
         this.btnAdd.active = !bSelect;
-        this.btnDel.active = bSelect;
         if (this.dishData.strUrl) {
             this.grpIcon.node.active = true;
             this.glbNotImg.string = "";
@@ -65,9 +61,5 @@ export class DishItem extends Component {
 
     private onClickAdd() {
         eventManager.dispatch("add_dish", [this.dishData]);
-    }
-
-    private onClickDel() {
-        MenuManage.ins.delSelectDish(this.dishData.id);
     }
 }

@@ -2,7 +2,7 @@
   "ver": "1.0.27",
   "importer": "image",
   "imported": true,
-  "uuid": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716",
+  "uuid": "eea6c413-65c0-47e0-97bc-6c8302eec73f",
   "files": [
     ".json",
     ".png"
@@ -10,14 +10,14 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716@6c48a",
-      "displayName": "btn2",
+      "uuid": "eea6c413-65c0-47e0-97bc-6c8302eec73f@6c48a",
+      "displayName": "img_del",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716",
+        "imageUuidOrDatabaseUri": "eea6c413-65c0-47e0-97bc-6c8302eec73f",
         "isUuid": true,
         "visible": false,
         "minfilter": "linear",
@@ -34,8 +34,8 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716@f9941",
-      "displayName": "btn2",
+      "uuid": "eea6c413-65c0-47e0-97bc-6c8302eec73f@f9941",
+      "displayName": "img_del",
       "id": "f9941",
       "name": "spriteFrame",
       "userData": {
@@ -49,10 +49,10 @@
         "height": 100,
         "rawWidth": 100,
         "rawHeight": 100,
-        "borderTop": 44,
-        "borderBottom": 46,
-        "borderLeft": 35,
-        "borderRight": 41,
+        "borderTop": 0,
+        "borderBottom": 0,
+        "borderLeft": 0,
+        "borderRight": 0,
         "packable": true,
         "pixelsToUnit": 100,
         "pivotX": 0.5,
@@ -113,9 +113,9 @@
           ]
         },
         "isUuid": true,
-        "imageUuidOrDatabaseUri": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716@6c48a",
+        "imageUuidOrDatabaseUri": "eea6c413-65c0-47e0-97bc-6c8302eec73f@6c48a",
         "atlasUuid": "",
-        "trimType": "none"
+        "trimType": "auto"
       },
       "ver": "1.0.12",
       "imported": true,
@@ -129,6 +129,6 @@
     "type": "sprite-frame",
     "hasAlpha": true,
     "fixAlphaTransparencyArtifacts": false,
-    "redirect": "e0b3dd87-b68e-45c8-8d4d-788c47cd6716@6c48a"
+    "redirect": "eea6c413-65c0-47e0-97bc-6c8302eec73f@6c48a"
   }
 }

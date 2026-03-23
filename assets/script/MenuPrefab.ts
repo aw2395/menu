@@ -25,6 +25,8 @@ export class MenuPrefab extends Component {
     private scrollDish: ScrollView = null;
     @property(Prefab)
     private dishItem: Prefab = null;
+    @property(Label)
+    private glbPrice: Label = null;
 
     start() {
         this.initView();
@@ -56,6 +58,7 @@ export class MenuPrefab extends Component {
     private updateView() {
         let vSelectDish: DishData[] = MenuManage.ins.getSelectDish();
         this.glbDishNum.string = `当前已点菜品数：${vSelectDish.length}`;
+        this.glbPrice.string = `价格：￥${vSelectDish.length}`;
         let nSelectedId: number = MenuManage.ins.nSelectIndex;
         let vDishDataOfId: DishData[] = MenuManage.ins.getMapDishDataBySelect(nSelectedId);
         for (let i = 0; i < vDishDataOfId.length; i++) {
