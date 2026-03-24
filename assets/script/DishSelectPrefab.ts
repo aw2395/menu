@@ -63,26 +63,7 @@ export class DishSelectPrefab extends Component {
                 strDesc += "&&";
             }
         }
-        if (!navigator.share) {
-            eventManager.dispatch("tip_text", ["你的浏览器不支持分享功能，请使用微信/QQ浏览器或升级版本"]);
-            return;
-        }
-        try {
-            // 仅传标题+链接（核心参数），无图片也能正常分享
-            navigator
-                .share({
-                    title: "小艾菜单", // 分享标题
-                    url: "https://aw2395.github.io/menu/", // 游戏链接（自动获取当前页面）
-                } as any)
-                .then(() => {
-                    MenuManage.ins.handleCopy(strDesc);
-                })
-                .catch((err) => {
-                    eventManager.dispatch("tip_text", ["分享已取消或失败"]);
-                });
-        } catch (e) {
-            eventManager.dispatch("tip_text", ["分享出错，请稍后再试"]);
-        }
+        MenuManage.ins.handleCopy(strDesc);
     }
 
     private dishChangeEvent() {

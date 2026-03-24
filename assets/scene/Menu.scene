@@ -909,6 +909,9 @@
       "__uuid__": "bb3ad46f-eb2b-4b53-88dd-c36a4a94a35a",
       "__expectedType__": "cc.Prefab"
     },
+    "btnShare": {
+      "__id__": 11
+    },
     "_id": "652ZySJ7RGfaFm7LXnms2A"
   },
   {
