@@ -52,7 +52,7 @@ export class DishBigImg extends Component {
         let scale = distance / this.originalTouchDistance;
         Vec3.multiplyScalar(targetScale, this.originalNodeScale, scale);
         scale = targetScale.x;
-        scale = clamp(scale, 0.5, 1);
+        scale = clamp(scale, 0.5, 2);
         UIOp2DUtils.setScale(this.grpIcon.node, scale, scale);
     }
 

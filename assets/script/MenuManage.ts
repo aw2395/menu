@@ -325,6 +325,7 @@ export class MenuManage {
     }
 
     public handleCopy(sDesc: string) {
+        eventManager.dispatch("tip_text", ["复制成功，去微信直接粘贴"]);
         if (sys.os == sys.OS.WINDOWS || sys.isBrowser) {
             let input = document.createElement("input");
             input.value = sDesc;
@@ -334,6 +335,5 @@ export class MenuManage {
             document.execCommand("Copy");
             document.body.removeChild(input);
         }
-        eventManager.dispatch("tip_text", ["复制成功，去微信直接粘贴"]);
     }
 }
